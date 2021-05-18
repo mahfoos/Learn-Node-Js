@@ -7,6 +7,27 @@ const app = express();
 // listen for request 
 app.listen(3000);
 
+// Routing 
+app.get('/', (req, res) => {
+
+    //res.send('<p> home page</p>');
+    res.sendFile('./views/index.html', { root: __dirname})
+
+});
+
 app.get('/about', (req, res) => {
+
+    //res.send('<p> About page</p>');
+    res.sendFile('./views/about.html', { root: __dirname})
     
+});
+
+// redirects 
+app.get('/about-us', (req, res) => {
+    res.redirect('/about');
+})
+
+// 404 page use used for if missed url it will be wrong
+app.use((req, res) => {
+    res.sendFile('./views/404.html', { root: __dirname})
 })
