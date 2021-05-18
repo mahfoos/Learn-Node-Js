@@ -1,10 +1,21 @@
-const http = require('http');
+const http = require('http');  // Import modules 
 const fs = require('fs');
+const _ = require('lodash');
 
 const server = http.createServer((req, res) => {
-    console.log('request made');  // this code run in server
-    console.log(req.url, req.method); 
+    // console.log('request made');  // this code run in server
+    // console.log(req.url, req.method); 
 
+    // lodash
+    const num = _.random(0, 20);
+    console.log(num);
+
+    const greet = _.once(() => {
+        console.log('hallo');
+    });
+
+    greet();
+    
     // set header content type
     res.setHeader('Content-Type', 'text/html');
 

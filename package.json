@@ -1,0 +1,26 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahfoos/Learn-Node-Js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahfoos/Learn-Node-Js/issues"
+  },
+  "homepage": "https://github.com/mahfoos/Learn-Node-Js#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
